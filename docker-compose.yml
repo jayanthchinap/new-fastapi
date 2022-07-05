@@ -27,8 +27,8 @@ services:
   server:
     container_name: backend
     build: ./server
-    command: uvicorn sql_app.main:app --port 80 --reload
+    command: uvicorn sql_app.main:app --host 0.0.0.0 --port 5000 --reload
     ports:
-      - "5000:80"
+      - "5000:5000"
     environment:
       - SQLITE_PATH=/sql_app.db

@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import delete
 from fastapi import HTTPException
 
-import models, schemas
+from . import models, schemas
 
 
 
